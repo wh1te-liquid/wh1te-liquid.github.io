@@ -22,5 +22,10 @@
         }
       }
     </script>
+    <script>
+      const resizeObserver = new ResizeObserver(entries =>
+      Resize.postMessage("height" + (entries[0].target.clientHeight).toString()) )
+      resizeObserver.observe(document.body)
+</script>
   </body>
 </html>
