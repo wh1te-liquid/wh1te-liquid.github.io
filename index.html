@@ -16,16 +16,10 @@
     </form>
     <script>
       function captchaCallback(response){
-        //console.log(response);
         if(typeof Captcha!=="undefined"){
           Captcha.postMessage(response);
         }
       }
     </script>
-    <script>
-      const resizeObserver = new ResizeObserver(entries =>
-      Resize.postMessage("height" + (entries[0].target.clientHeight).toString()) )
-      resizeObserver.observe(document.body)
-</script>
   </body>
 </html>
